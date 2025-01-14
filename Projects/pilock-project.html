@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pi-Lock System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../Styles/project-styles.css">
+    <style>
+        .actions .github {
+            background: #3a0ca3;
+            color: white;
+        }
+
+        .actions .github:hover {
+            background: #7209b7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <a href="../portfolio.html">&larr; Back</a>
+            <span>Projects &gt; Pi-Lock System</span>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Left Content -->
+            <div class="left-content">
+                <h1>Pi-Lock System</h1>
+                <div class="description">
+                    <p>The Pi-Lock system is an innovative capstone project that enhances the security, access control,
+                        and management of the Mac Laboratory at CSPC. With the integration of RFID technology, scheduled
+                        access authentication, and real-time monitoring, it provides a modern and efficient solution to
+                        the challenges of traditional laboratory management. This would allow only students and faculty
+                        members who have scheduled classes to enter the laboratory at a specific time, thus improving
+                        security and efficiency in the operations of the system. Besides access control, Pi-Lock
+                        provides an all-around attendance tracking, log details, and performance monitoring of connected
+                        devices, making it a versatile tool for managing laboratory activities.
+                    </p>
+                </div>
+
+                <div class="actions" >
+                    <a href="https://github.com/D-Logics-Team-BA-Capstone-Project/PiLock-Admin-Laravel-11"
+                        class="github" target="_blank">GitHub</a>
+                </div>
+                
+
+                <div class="technologies">
+                    <h4><i class="fa fa-code"></i> Technologies Used</h4>
+                    <span>Blade</span>
+                    <span>Javascript</span>
+                    <span>PHP</span>
+                    <span>CCS</span>
+                </div>
+            </div>
+
+            <!-- Right Content -->
+            <div class="right-content">
+                <div class="main-image">
+                    <img id="mainImage" src="../Images/Projects/Pilock-Project/homepage.png" alt="Project Screenshot">
+                    <div class="image-selection">
+                        <img class="selectable" src="../Images/Projects/Pilock-Project/admin_dashboard.png"
+                            alt="Image 1">
+                        <img class="selectable" src="../Images/Projects/Pilock-Project/instructor_dashboard.png"
+                            alt="Image 2">
+                        <img class="selectable" src="../Images/Projects/Pilock-Project/student_dashboard.png"
+                            alt="Image 3">
+                    </div>
+                </div>
+
+                <div class="key-features">
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li>RFID-Based Access Control: Users tap their school IDs on RFID scanners to gain entry or
+                            exit, ensuring only authorized personnel access the laboratory.</li>
+                        <li>Scheduled Access Management: Access is restricted based on predefined schedules, allowing
+                            only students and faculty with assigned classes to enter during specific times.</li>
+                        <li>Attendance Tracking and Logs: Automatically records attendance and entry/exit logs,
+                            providing detailed data for monitoring and reporting.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Anne Nicole A. Sombrero. All Rights Reserved.</p>
+    </footer>
+
+
+
+    <script>
+        // Add event listeners to all images in the selection
+        document.querySelectorAll('.selectable').forEach(img => {
+            img.addEventListener('click', () => {
+                // Change the main image source to the clicked image source
+                const mainImage = document.getElementById('mainImage');
+                const tempSrc = mainImage.src;
+                mainImage.src = img.src;
+                img.src = tempSrc; // Swap the images
+            });
+        });
+    </script>
+</body>
+
+</html>
