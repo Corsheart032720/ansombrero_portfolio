@@ -27,6 +27,12 @@
 
     <header>
         <div class="name">Anne</div>
+        <!-- Add nav toggler button -->
+        <div class="nav-toggler">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <nav>
             <a href="#">Home</a>
             <a href="#about">About Me</a>
@@ -34,6 +40,26 @@
             <a href="#contact">Contact</a>
         </nav>
     </header>
+
+    <script>
+        // Add this to your existing scripts
+        const navToggler = document.querySelector('.nav-toggler');
+        const nav = document.querySelector('nav');
+    
+        navToggler.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            // Optional: Animate toggler
+            navToggler.classList.toggle('active');
+        });
+    
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                navToggler.classList.remove('active');
+            });
+        });
+    </script>
 
     <div class="main-content">
         <div class="content">
@@ -75,7 +101,7 @@
         <!-- Highlight Cards -->
         <div class="highlight-cards">
 
-            <div class="card" href="#portfolio">
+            <div class="card" >
                 <h3>Total Projects</h3>
                 <p>3</p>
             </div>
@@ -92,8 +118,8 @@
 
     <section id="portfolio">
         <h2>My Portfolio</h2>
-        <h3>Explore my journey through projects, certifications, and technical expertise. </h3>
-
+        <h3>Explore my journey through projects, certifications, and technical expertise.</h3>
+        
         <!-- Portfolio Tabs -->
         <div class="portfolio-nav">
             <div class="portfolio-tabs">
@@ -102,8 +128,10 @@
                 <span data-tab="tech-stack">Tech Stack</span>
             </div>
         </div>
-        <!-- Projects Tab Content -->
-        <div class="tech-bg">
+
+        <!-- Tab Contents Container -->
+        <div class="tab-contents">
+            <!-- Projects Tab Content -->
             <div class="tab-content active" id="projects">
                 <div class="project-card">
                     <div class="bg-img">
@@ -137,8 +165,17 @@
                         <a href="Projects/app-ecommerce.html" class="details-link">Details &nbsp-></a>
                     </div>
                 </div>
+                <div class="project-card">
+                    <div class="bg-img">
+                        <img src="Images/Projects/Pilock-Project/homepage.png" alt="Project 3">
+                    </div>
+                    <h4>Ecommerce Application</h4>
+                    <p>A brief description of Project 1 lorem epselum losssss</p>
+                    <div class="link-bg">
+                        <a href="Projects/app-ecommerce.html" class="details-link">Details &nbsp-></a>
+                    </div>
+                </div>
             </div>
-
 
             <!-- Certificates Tab Content -->
             <div class="tab-content" id="certificates">
@@ -154,7 +191,6 @@
             </div>
 
             <!-- Tech Stack Tab Content -->
-
             <div class="tab-content" id="tech-stack">
                 <div class="tech-icons">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
@@ -231,6 +267,7 @@
                 <p>Have something to discuss? Send me a message and let's talk.</p>
                 <form hre id="contactForm" method="POST">
                     <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
                     <input type="text" name="name" placeholder="&#xf007; Your Name"
                         style="font-family: 'FontAwesome', Arial; height: 30px;" required>
                     <input type="email" name="email" placeholder="&#xf0e0; Your Email"
@@ -312,6 +349,27 @@
             contactForm.reset(); // Clear the form inputs
         }
 
+    </script>
+
+    <script>
+        // Tab switching functionality
+        const tabButtons = document.querySelectorAll('.portfolio-tabs span');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                // Show corresponding content
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
     </script>
 </body>
 
