@@ -1,15 +1,48 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "**/*.html",
-        "use": "@vercel/static"
-      }
-    ],
-    "routes": [
-      { "src": "/", "dest": "/index.html" },
-      { "src": "/pages/(.*)", "dest": "/pages/$1" },
-      { "src": "/public/(.*)", "dest": "/public/$1" }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "pages/**/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "public/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/inworke-project",
+      "dest": "/pages/inworke-project.html"
+    },
+    {
+      "src": "/pilock-project",
+      "dest": "/pages/pilock-project.html"
+    },
+    {
+      "src": "/pos-project",
+      "dest": "/pages/pos-project.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
+}
