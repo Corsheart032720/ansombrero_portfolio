@@ -258,7 +258,7 @@
                 <h2>Get in Touch</h2>
                 <p>Have something to discuss? Send me a message and let's talk.</p>
                 <form action="https://formsubmit.co/annenicolehat@gmail.com" method="POST">
-                    <input type="hidden" name="_next" value="https://my-portfolio-ansombrero.vercel.app/">
+                    <input type="hidden" name="_next" value="https://your-vercel-domain.vercel.app#contact">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
                     <input type="text" name="name" placeholder="&#xf007; Your Name"
@@ -317,19 +317,10 @@
         const contactForm = document.getElementById('contactForm');
         const confirmationDialog = document.getElementById('confirmationDialog');
 
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault(); // Prevent the default form submission
-
-            const formData = new FormData(contactForm); // Collect form data
-
-            try {
-                // Send form data using fetch
-                await fetch('https://formsubmit.co/annenicolehat@gmail.com', {
-                    method: 'POST',
-                    body: formData,
-                });
-
-                // Show the confirmation dialog
+        contactForm.addEventListener('submit', (e) => {
+            // Don't prevent default form submission
+            // Show the confirmation dialog after a short delay
+            setTimeout(() => {
                 confirmationDialog.classList.add('active');
             }, 1000);
         });
