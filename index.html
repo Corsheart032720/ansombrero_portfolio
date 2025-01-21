@@ -335,7 +335,7 @@
         const loadingDialog = document.getElementById('loadingDialog');
         const confirmationDialog = document.getElementById('confirmationDialog');
 
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             
             // Show loading state
@@ -343,17 +343,32 @@
             dialogOverlay.classList.add('active');
             loadingDialog.classList.add('active');
 
-            // Submit the form after a short delay to show loading state
-            setTimeout(() => {
+            try {
+                // Actually submit the form data
+                const formData = new FormData(contactForm);
+                await fetch('https://formsubmit.co/annenicolehat@gmail.com', {
+                    method: 'POST',
+                    body: formData
+                });
+
                 // Hide loading dialog
                 loadingDialog.classList.remove('active');
                 
                 // Show success dialog
                 confirmationDialog.classList.add('active');
                 
-                // Actually submit the form
-                contactForm.submit();
-            }, 2000); // Show loading for 2 seconds
+                // Reset form
+                contactForm.reset();
+                
+            } catch (error) {
+                console.error('Error:', error);
+                loadingDialog.classList.remove('active');
+                alert('There was an error sending your message. Please try again.');
+                dialogOverlay.classList.remove('active');
+            }
+            
+            // Reset button state
+            submitBtn.classList.remove('loading');
         });
 
         function closeDialog() {
