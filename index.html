@@ -257,7 +257,8 @@
             <div class="cbox contact-form">
                 <h2>Get in Touch</h2>
                 <p>Have something to discuss? Send me a message and let's talk.</p>
-                <form hre id="contactForm" method="POST">
+                <form action="https://formsubmit.co/annenicolehat@gmail.com" method="POST">
+                    <input type="hidden" name="_next" value="https://your-vercel-domain.vercel.app#contact">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
                     <input type="text" name="name" placeholder="&#xf007; Your Name"
@@ -316,31 +317,18 @@
         const contactForm = document.getElementById('contactForm');
         const confirmationDialog = document.getElementById('confirmationDialog');
 
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault(); // Prevent the default form submission
-
-            const formData = new FormData(contactForm); // Collect form data
-
-            try {
-                // Send form data using fetch
-                await fetch('https://formsubmit.co/ansombrero@my.cspc.edu.ph', {
-                    method: 'POST',
-                    body: formData,
-                });
-
-                // Show the confirmation dialog
+        contactForm.addEventListener('submit', (e) => {
+            // Don't prevent default form submission
+            // Show the confirmation dialog after a short delay
+            setTimeout(() => {
                 confirmationDialog.classList.add('active');
-            } catch (error) {
-                console.error('Error submitting the form:', error);
-                alert('There was an issue sending your message. Please try again later.');
-            }
+            }, 1000);
         });
 
         function closeDialog() {
             confirmationDialog.classList.remove('active');
-            contactForm.reset(); // Clear the form inputs
+            // Form will be reset automatically after submission
         }
-
     </script>
 
     <script>
