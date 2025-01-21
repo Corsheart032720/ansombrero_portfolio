@@ -257,7 +257,7 @@
             <div class="cbox contact-form">
                 <h2>Get in Touch</h2>
                 <p>Have something to discuss? Send me a message and let's talk.</p>
-                <form action="https://formsubmit.co/annenicolehat@gmail.com" method="POST">
+                <form id="contactForm" action="https://formsubmit.co/annenicolehat@gmail.com" method="POST">
                     <input type="hidden" name="_next" value="https://my-portfolio-ansombrero.vercel.app/#contact">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
@@ -267,17 +267,32 @@
                         style="font-family: 'FontAwesome', Arial; height: 30px;" required>
                     <textarea name="message" rows="5" placeholder="&#xf075; Your Message"
                         style="font-family: 'FontAwesome', Arial; height: 200px;" required></textarea>
-                    <button type="submit"><i class="fa fa-paper-plane"></i> Send Message</button>
+                    <button type="submit" id="submitBtn">
+                        <span class="btn-text"><i class="fa fa-paper-plane"></i> Send Message</span>
+                        <span class="loading-spinner"></span>
+                    </button>
                 </form>
             </div>
         </div>
 
-        <!-- Confirmation Dialog -->
-        <div class="dialog-overlay" id="confirmationDialog">
-            <div class="dialog">
-                <h3>Message Sent</h3>
+        <!-- Loading and Confirmation Dialog -->
+        <div class="dialog-overlay" id="dialogOverlay">
+            <div class="dialog" id="loadingDialog">
+                <div class="loading-spinner"></div>
+                <p>Sending message...</p>
+            </div>
+            <div class="dialog" id="confirmationDialog">
+                <div class="success-checkmark">
+                    <div class="check-icon">
+                        <span class="icon-line line-tip"></span>
+                        <span class="icon-line line-long"></span>
+                        <div class="icon-circle"></div>
+                        <div class="icon-fix"></div>
+                    </div>
+                </div>
+                <h3>Message Sent!</h3>
                 <p>Thank you for getting in touch. I will respond as soon as possible!</p>
-                <button onclick="closeDialog()">Close</button>
+                <button onclick="closeDialog()" class="close-btn">Close</button>
             </div>
         </div>
 
@@ -315,20 +330,44 @@
 
     <script>
         const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const dialogOverlay = document.getElementById('dialogOverlay');
+        const loadingDialog = document.getElementById('loadingDialog');
         const confirmationDialog = document.getElementById('confirmationDialog');
 
         contactForm.addEventListener('submit', (e) => {
-            // Don't prevent default form submission
-            // Show the confirmation dialog after a short delay
+            e.preventDefault();
+            
+            // Show loading state
+            submitBtn.classList.add('loading');
+            dialogOverlay.classList.add('active');
+            loadingDialog.classList.add('active');
+
+            // Submit the form after a short delay to show loading state
             setTimeout(() => {
+                // Hide loading dialog
+                loadingDialog.classList.remove('active');
+                
+                // Show success dialog
                 confirmationDialog.classList.add('active');
-            }, 1000);
+                
+                // Actually submit the form
+                contactForm.submit();
+            }, 2000); // Show loading for 2 seconds
         });
 
         function closeDialog() {
+            dialogOverlay.classList.remove('active');
             confirmationDialog.classList.remove('active');
-            // Form will be reset automatically after submission
+            submitBtn.classList.remove('loading');
         }
+
+        // Close dialog when clicking outside
+        dialogOverlay.addEventListener('click', (e) => {
+            if (e.target === dialogOverlay) {
+                closeDialog();
+            }
+        });
     </script>
 
     <script>
