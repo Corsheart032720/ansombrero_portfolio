@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Ordering System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../Styles/project-styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <a href="../portfolio.html">&larr; Back</a>
+            <span>Projects &gt; Pizza Ordering System</span>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Left Content -->
+            <div class="left-content">
+                <h1>Pizza Ordering System</h1>
+                <div class="description">
+                    <p>
+                        The Simple GUI Pizza Ordering System is a Java-based school project that provides a
+                        user-friendly platform for managing pizza orders. This system demonstrates the power of core
+                        Java in creating an intuitive graphical user interface (GUI) while streamlining the ordering
+                        process for various user roles, including Admin, Cashier, and Guest. The application allows
+                        users to log in, customize pizzas with various crusts and toppings, and track total sales
+                        efficiently. Designed with simplicity and functionality in mind, it ensures a seamless
+                        experience for users while offering robust features to handle transactions and manage sales
+                        data.
+                    </p>
+                </div>
+
+                <div class="actions">
+                    <a href="https://github.com/Corsheart032720/simple-gui-pizza-ordering-system"
+                        class="github" target="_blank">GitHub</a>
+                </div>
+
+                <div class="technologies">
+                    <h4><i class="fa fa-code"></i> Technologies Used</h4>
+                    <span>Java</span>
+                </div>
+            </div>
+
+            <!-- Right Content -->
+            <div class="right-content">
+                <div class="main-image">
+                    <img id="mainImage" src="../Images/Projects/POS/pos.png" alt="Project Screenshot">
+                    <div class="image-selection">
+                        <img class="selectable" src="../Images/Projects/POS/pos.png"
+                            alt="Image 1">
+                        <img class="selectable" src="../Images/Projects/POS/login.png"
+                            alt="Image 2">
+                        <img class="selectable" src="../Images/Projects/POS/brokernframe.png"
+                            alt="Image 3">
+                    </div>
+                </div>
+
+                <div class="key-features">
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li><i class="fa fa-check"></i>&nbsp;<b>Access and Login System:</b>&nbsp
+                            The application includes a secure and role-specific login feature. Admins and cashiers log
+                            in using predefined credentials, while guests can access the system without a login.</li>
+                        <li><i class="fa fa-check"></i>&nbsp;<b>Pizza Customization and Real-Time Sales Tracking:</b>&nbsp
+                            Users can customize their pizzas by selecting crust types (Normal, Cheesy, Sausage) and
+                            adding extra toppings like Extra Cheese or Mushrooms, each with corresponding prices. </li>
+                        <li><i class="fa fa-check"></i>&nbsp;<b>Interactive GUI with Intuitive Navigation:</b>&nbsp
+                            The application uses GUI components like JLabel, JComboBox, JCheckBox, JButton, and
+                            JTextField to create an engaging and easy-to-use interface. Users are guided through the
+                            process with clear prompts, error messages for incorrect login attempts, and confirmation
+                            dialogs for actions like logging out or resetting sales. </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Anne Nicole A. Sombrero. All Rights Reserved.</p>
+    </footer>
+
+
+
+    <script>
+        // Add event listeners to all images in the selection
+        document.querySelectorAll('.selectable').forEach(img => {
+            img.addEventListener('click', () => {
+                // Change the main image source to the clicked image source
+                const mainImage = document.getElementById('mainImage');
+                const tempSrc = mainImage.src;
+                mainImage.src = img.src;
+                img.src = tempSrc; // Swap the images
+            });
+        });
+    </script>
+</body>
+
+</html>

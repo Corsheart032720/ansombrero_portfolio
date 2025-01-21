@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Inworke Website & Application</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../Styles/project-styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <a href="../portfolio.html">&larr; Back</a>
+            <span>Projects &gt; Freelance Inworke Website & Application</span>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Left Content -->
+            <div class="left-content">
+                <h1>Freelance Inworke Website & Application</h1>
+                <div class="description">
+                    <p>The Freelance Inworke platform is a school project designed to connect freelancers
+                        and clients seamlessly through a PHP-powered website and a React Native mobile application. By
+                        leveraging the power of a RESTful API, the platform ensures real-time synchronization and
+                        communication between the web and mobile interfaces. Freelancers can showcase their skills, bid
+                        on projects, and track their progress, while clients can post jobs, hire the best talent, and
+                        collaborate in real time. The platform’s secure and user-friendly design prioritizes efficiency
+                        and accessibility for all users. Additionally, the Freelance Inworke platform is equipped with
+                        payment systems, intuitive navigation, and tools for managing profiles, jobs, and
+                        projects, making it a comprehensive solution for freelance connectivity.
+                    </p>
+                </div>
+
+                <div class="actions">
+                    <a href="https://github.com/Corsheart032720/inworke-freelance-web-app"
+                        class="github" target="_blank">GitHub</a>
+                </div>
+
+                <div class="technologies">
+                    <h4><i class="fa fa-code"></i> Technologies Used</h4>
+                    <span>PHP</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Javascript</span>
+                </div>
+            </div>
+
+            <!-- Right Content -->
+            <div class="right-content">
+                <div class="main-image">
+                    <img id="mainImage" src="../Images/Projects/Inworke/inworke_homepage.png" alt="Project Screenshot">
+                    <div class="image-selection">
+                        <img class="selectable" src="../Images/Projects/Inworke/inworke_registration.png"
+                            alt="Image 1">
+                        <img class="selectable" src="../Images/Projects/Inworke/inworke_services.png"
+                            alt="Image 2">
+                        <img class="selectable" src="../Images/Projects/Inworke/inworke_orders.png"
+                            alt="Image 3">
+                    </div>
+                </div>
+
+                <div class="key-features">
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li><i class="fa fa-check"></i>&nbsp;<b>Real-Time Communication and Synchronization:&nbsp</b>
+                             Changes made on one platform instantly reflect
+                            on the other, ensuring a consistent experience for users switching between mobile and web
+                            interfaces.</li>
+                        <li><i class="fa fa-check"></i>&nbsp;<b>Comprehensive Job Management:&nbsp</b>
+                             Freelancers can bid on jobs, track ongoing projects, and
+                            manage their profiles, while clients can post jobs, review candidates, and hire the best
+                            match.
+                        </li>
+                        <li><i class="fa fa-check"></i>&nbsp;<b>Secure and Scalable System:&nbsp</b>
+                            A robust backend built with PHP, secure RESTful API for data
+                            exchange, and scalable database design provide a safe and reliable platform for users.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Anne Nicole A. Sombrero. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Add event listeners to all images in the selection
+        document.querySelectorAll('.selectable').forEach(img => {
+            img.addEventListener('click', () => {
+                // Change the main image source to the clicked image source
+                const mainImage = document.getElementById('mainImage');
+                const tempSrc = mainImage.src;
+                mainImage.src = img.src;
+                img.src = tempSrc; // Swap the images
+            });
+        });
+    </script>
+</body>
+
+</html>
