@@ -12,7 +12,6 @@
       { "src": "/pages/(.*)", "dest": "/pages/$1" },
       { "src": "/public/(.*)", "dest": "/public/$1" }
     ],
-    "analytics": true,
     "headers": [
       {
         "source": "/(.*)",
@@ -32,5 +31,5 @@
         ]
       }
     ]
-  }
+}
   
