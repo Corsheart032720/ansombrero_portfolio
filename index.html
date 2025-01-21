@@ -275,12 +275,8 @@
             </div>
         </div>
 
-        <!-- Loading and Confirmation Dialog -->
+        <!-- Confirmation Dialog -->
         <div class="dialog-overlay" id="dialogOverlay">
-            <div class="dialog" id="loadingDialog">
-                <div class="loading-spinner"></div>
-                <p>Sending message...</p>
-            </div>
             <div class="dialog" id="confirmationDialog">
                 <div class="success-checkmark">
                     <div class="check-icon">
@@ -332,49 +328,22 @@
         const contactForm = document.getElementById('contactForm');
         const submitBtn = document.getElementById('submitBtn');
         const dialogOverlay = document.getElementById('dialogOverlay');
-        const loadingDialog = document.getElementById('loadingDialog');
         const confirmationDialog = document.getElementById('confirmationDialog');
 
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            // Show loading state
-            submitBtn.classList.add('loading');
+        contactForm.addEventListener('submit', (e) => {
+            // Show success dialog
             dialogOverlay.classList.add('active');
-            loadingDialog.classList.add('active');
-
-            try {
-                // Actually submit the form data
-                const formData = new FormData(contactForm);
-                await fetch('https://formsubmit.co/annenicolehat@gmail.com', {
-                    method: 'POST',
-                    body: formData
-                });
-
-                // Hide loading dialog
-                loadingDialog.classList.remove('active');
-                
-                // Show success dialog
-                confirmationDialog.classList.add('active');
-                
-                // Reset form
-                contactForm.reset();
-                
-            } catch (error) {
-                console.error('Error:', error);
-                loadingDialog.classList.remove('active');
-                alert('There was an error sending your message. Please try again.');
-                dialogOverlay.classList.remove('active');
-            }
+            confirmationDialog.classList.add('active');
             
-            // Reset button state
-            submitBtn.classList.remove('loading');
+            // Hide dialog after 3 seconds
+            setTimeout(() => {
+                closeDialog();
+            }, 3000);
         });
 
         function closeDialog() {
             dialogOverlay.classList.remove('active');
             confirmationDialog.classList.remove('active');
-            submitBtn.classList.remove('loading');
         }
 
         // Close dialog when clicking outside
