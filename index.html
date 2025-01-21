@@ -317,10 +317,19 @@
         const contactForm = document.getElementById('contactForm');
         const confirmationDialog = document.getElementById('confirmationDialog');
 
-        contactForm.addEventListener('submit', (e) => {
-            // Don't prevent default form submission
-            // Show the confirmation dialog after a short delay
-            setTimeout(() => {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault(); // Prevent the default form submission
+
+            const formData = new FormData(contactForm); // Collect form data
+
+            try {
+                // Send form data using fetch
+                await fetch('https://formsubmit.co/annenicolehat@gmail.com', {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                // Show the confirmation dialog
                 confirmationDialog.classList.add('active');
             }, 1000);
         });
