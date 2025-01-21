@@ -275,12 +275,8 @@
             </div>
         </div>
 
-        <!-- Loading and Success Dialogs -->
+        <!-- Success Dialog -->
         <div class="dialog-overlay" id="dialogOverlay">
-            <div class="dialog" id="loadingDialog">
-                <div class="loading-spinner"></div>
-                <p>Sending message...</p>
-            </div>
             <div class="dialog" id="confirmationDialog">
                 <div class="success-checkmark">
                     <div class="check-icon">
@@ -330,31 +326,22 @@
 
     <script>
         const contactForm = document.getElementById('contactForm');
-        const submitBtn = document.getElementById('submitBtn');
         const dialogOverlay = document.getElementById('dialogOverlay');
-        const loadingDialog = document.getElementById('loadingDialog');
         const confirmationDialog = document.getElementById('confirmationDialog');
 
         contactForm.addEventListener('submit', (e) => {
-            // Show loading dialog first
+            // Show success dialog
             dialogOverlay.classList.add('active');
-            loadingDialog.classList.add('active');
+            confirmationDialog.classList.add('active');
             
-            // After 2 seconds, switch to success dialog
+            // Hide dialog after 3 seconds
             setTimeout(() => {
-                loadingDialog.classList.remove('active');
-                confirmationDialog.classList.add('active');
-                
-                // Hide success dialog after 3 seconds
-                setTimeout(() => {
-                    closeDialog();
-                }, 3000);
-            }, 2000);
+                closeDialog();
+            }, 10000);
         });
 
         function closeDialog() {
             dialogOverlay.classList.remove('active');
-            loadingDialog.classList.remove('active');
             confirmationDialog.classList.remove('active');
         }
 
