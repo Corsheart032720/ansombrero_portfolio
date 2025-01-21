@@ -334,7 +334,7 @@
             dialogOverlay.classList.add('active');
             confirmationDialog.classList.add('active');
             
-            // Hide dialog after 3 seconds
+            // Hide dialog after 10 seconds
             setTimeout(() => {
                 closeDialog();
             }, 10000);
@@ -343,6 +343,8 @@
         function closeDialog() {
             dialogOverlay.classList.remove('active');
             confirmationDialog.classList.remove('active');
+            // Reset form when dialog is closed
+            contactForm.reset();
         }
 
         // Close dialog when clicking outside
