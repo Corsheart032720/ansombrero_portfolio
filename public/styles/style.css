@@ -832,21 +832,6 @@ section.active .tab-content {
     .bg-img {
         height: 200px;
     }
-
-    .tech-icons {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 1rem;
-        padding: 2rem;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-    
-    .tech-icons img {
-        width: 80px;
-        height: 80px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -1464,15 +1449,113 @@ footer p {
         flex-wrap: wrap;
         gap: 1rem;
         padding: 2rem;
-        max-width: 600px;
-        margin: 0 auto;
+        max-width: 600px; /* Added max-width */
+        margin: 0 auto; /* Center the container */
     }
     
     .tech-icons img {
-        width: 80px;
+        width: 80px; /* Increased from 60px for better visibility */
         height: 80px;
     }
 
+    .project-card .link-bg {
+        margin: 1rem auto;
+        width: auto;
+        max-width: 110px;
+        margin-left: auto;
+    }
+
+}
+
+/* Add or update these responsive styles */
+
+/* Base responsive adjustments */
+@media (max-width: 1024px) {
+    .main-content {
+        padding: 2rem;
+        gap: 3rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: auto;
+        padding-top: 100px;
+    }
+
+    .main-content .content {
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .main-content h1,
+    .main-content h2,
+    .main-content h3,
+    .main-content p {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .main-content h1 {
+        font-size: 4rem;
+    }
+
+    .main-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .main-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .header-graphic {
+        margin-top: 2rem;
+    }
+
+    .header-graphic img {
+        max-width: 400px;
+    }
+}
+
+/* Tablet specific adjustments */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        padding: 2rem;
+    }
+
+    .about-container {
+        gap: 3rem;
+    }
+
+    .highlight-cards {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .card {
+        min-width: 250px;
+        flex: 0 1 calc(50% - 1rem);
+    }
+
+    .portfolio-tabs {
+        width: 90%;
+        max-width: 600px;
+    }
+
+    .tab-content.active {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .contact .container {
+        gap: 2rem;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
     .project-card .link-bg {
         margin: 1rem auto;
         width: auto;
