@@ -775,13 +775,10 @@ section.active .tab-content {
         width: 100%;
     }
 
-   
     .about-details h2,
-    .about-details p{
-        text-align: center !important;
-    }
-    .about-details h3{
-        margin-left: 100px;
+    .about-details h3,
+    .about-details p {
+        text-align: left !important;
     }
 
     .project-card {
@@ -1373,7 +1370,7 @@ footer p {
     .project-card .link-bg {
         margin: 1rem auto;
         width: auto;
-        max-width: 150px;
+        max-width: 100px;
     }
 
     /* Contact Section */
