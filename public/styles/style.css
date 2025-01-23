@@ -581,10 +581,10 @@ section.active .tab-content {
 
 .tab-content.active {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    opacity: 1;
-    position: relative;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+    gap: 2.5rem;
+    justify-content: center;
+    padding: 0 2rem;
 }
 
 /* Contact Section Styles */
@@ -664,6 +664,7 @@ section.active .tab-content {
     transition: background 0.3s ease, transform 0.2s ease;
     margin-left: auto;
     width: fit-content;
+    min-width: 80px;
     padding: 5px 15px;
     margin-bottom: 5%;
 }
@@ -700,6 +701,8 @@ section.active .tab-content {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
     background: rgba(255, 255, 255, 0.1);
     transition: transform 0.3s;
+    max-width: 350px;
+    margin: 0 auto;
 }
 
 .certificate-card:hover {
@@ -1478,7 +1481,9 @@ footer p {
     }
 
     .tab-content.active {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(280px, 320px));
+        gap: 2.5rem;
+        padding: 0 2rem;
     }
 
     .contact .container {
@@ -1546,8 +1551,9 @@ footer p {
 
     .tab-content.active {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 2rem;
         padding: 0 1.5rem;
+        justify-items: center;
     }
 
     .contact .container {
@@ -1572,15 +1578,13 @@ footer p {
         margin: 0;
     }
 
-    .project-card {
-        width: 90%;
-        max-width: 300px;
+    .project-card, .certificate-card {
+        width: 85%;
+        max-width: 280px;
         margin: 0 auto;
-        padding: 0.8rem;
     }
 
     .bg-img {
-        width: 100%;
         height: 180px;
     }
 
@@ -1598,11 +1602,15 @@ footer p {
         margin-left: auto;
         margin-right: 0;
         padding: 4px 12px;
-        transform-origin: right;
+        min-width: 60px;
     }
 
     .link-bg .details-link {
         font-size: 0.8rem;
+    }
+
+    .certificate-card:hover {
+        transform: scale(1.1);
     }
 }
 
@@ -1641,13 +1649,26 @@ footer p {
         font-size: 11px;
     }
 
-    .project-card {
+    .project-card, .certificate-card {
         width: 85%;
-        max-width: 280px;
+        max-width: 260px;
     }
 
     .bg-img {
         height: 160px;
+    }
+
+    .project-card .link-bg {
+        min-width: 50px;
+        padding: 3px 10px;
+    }
+
+    .link-bg .details-link {
+        font-size: 0.8rem;
+    }
+
+    .certificate-card:hover {
+        transform: scale(1.05);
     }
 }
 
