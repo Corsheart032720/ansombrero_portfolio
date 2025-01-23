@@ -32,29 +32,21 @@ header {
     z-index: 1000;
     /* Ensure it stays on top of other elements */
     color: white;
-    padding: 0.8rem 5%;
-    /* Adjust padding to lower the header name and nav bar */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     background-color: #080015;
-    /* Add background to header for better visibility */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     opacity: 0.8;
-    /* Optional shadow for a floating effect */
-    max-width: 10000px;
     width: 100%;
     padding: 1rem 0;
     margin: 0;
 }
 
-
 header .name {
     font-size: 1rem;
     font-weight: 700;
     color: #7f5af0;
-    /* Violet color */
-    margin-left: 1rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 nav {
@@ -1198,37 +1190,29 @@ footer p {
 @media (max-width: 768px) {
     /* Header & Navigation */
     header {
-        padding: 1rem;
-        position: fixed; /* Changed from sticky to fixed */
-        width: 100%;
-        box-sizing: border-box;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
-        background-color: #080015;
-        z-index: 1000;
+        padding: 0.8rem 0;
+        position: relative;
+    }
+
+    header .name {
+        position: relative;
+        margin: 0;
+        padding: 0.5rem 0;
     }
 
     .nav-toggler {
-        display: flex;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     nav {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        height: 100vh;
-        width: 70%;
-        background: rgba(8, 0, 21, 0.95);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: 0.3s ease-in-out;
-        z-index: 999;
-    }
-
-    nav.active {
-        right: 0;
+        margin: 0;
+        width: 100%;
     }
 
     nav a {
