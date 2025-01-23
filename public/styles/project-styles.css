@@ -290,33 +290,25 @@ h1 {
     .main-image {
         width: 100%;
         margin: 0;
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        position: relative;
     }
 
     .main-image img {
-        width: 85%;
+        width: 100%;
         margin: 0;
     }
 
     .image-selection {
-        position: absolute;
-        right: 0;
-        top: 0;
-        flex-direction: column;
-        justify-content: flex-start;
+        position: static;
+        flex-direction: row;
+        justify-content: center;
         gap: 10px;
-        margin-top: 0;
-        width: auto;
-        height: 100%;
+        margin-top: 1rem;
+        width: 100%;
     }
 
     .image-selection img {
-        width: 40px;
-        height: 40px;
-        margin-right: 5px;
+        width: 50px;
+        height: 50px;
     }
 
     .technologies span {
@@ -350,18 +342,12 @@ h1 {
         gap: 2rem;
     }
 
-    .main-image {
-        position: relative;
-        width: 100%;
-    }
-
     .main-image img {
-        width: 85%;
+        width: 90%;
     }
 
     .image-selection {
-        right: 0;
-        margin-top: 0;
+        right: 10px;
     }
 }
 
