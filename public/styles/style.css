@@ -775,9 +775,9 @@ section.active .tab-content {
         width: 100%;
     }
 
-    .about-details h2 {
-        text-align: left !important;
-    }
+   
+    .about-details h2,
+    .about-details h3,
     .about-details p{
         text-align: center !important;
     }
