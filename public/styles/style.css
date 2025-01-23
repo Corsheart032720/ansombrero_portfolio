@@ -1256,12 +1256,12 @@ footer p {
 
     /* Adjust main content to account for fixed header */
     .main-content {
-        padding-top: 80px; /* Add padding to prevent content from hiding under header */
+        padding-top: 100px; /* Add padding to prevent content from hiding under header */
     }
 
     header .name {
         display: inline-block;
-        margin-right: 65px;
+        margin-right: 70px;
     }
 
     section h2 {
