@@ -1370,7 +1370,7 @@ footer p {
     .project-card .link-bg {
         margin: 1rem auto;
         width: auto;
-        max-width: 110px;
+        max-width: 100px;
         margin-left: auto;
     }
 
@@ -1425,11 +1425,7 @@ footer p {
         text-align: center;
         padding: 1rem;
     }
-    .project-card .link-bg {
-        margin: 1rem auto;
-        width: auto;
-        max-width: 100px;
-    }
+  
 }
 
 /* Tablet adjustments */
@@ -1450,6 +1446,13 @@ footer p {
     .tech-icons {
         gap: 2rem;
     }
+    .project-card .link-bg {
+        margin: 1rem auto;
+        width: auto;
+        max-width: 110px;
+        margin-left: auto;
+    }
+
 }
 
 /* Add or update these responsive styles */
@@ -1541,6 +1544,13 @@ footer p {
         max-width: 320px;
         margin: 0 auto;
     }
+    .project-card .link-bg {
+        margin: 1rem auto;
+        width: auto;
+        max-width: 110px;
+        margin-left: auto;
+    }
+
 
     .certificate-card {
         width: 100%;
