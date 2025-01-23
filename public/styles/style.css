@@ -324,7 +324,7 @@ section.active h3 {
 .about-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     gap: 4rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -334,8 +334,6 @@ section.active h3 {
 .about-details {
     flex: 1;
     text-align: left;
-    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-    transform: translateY(20px);
 }
 
 section.active .about-details {
@@ -576,10 +574,12 @@ section.active .tab-content {
 
 .tab-content.active {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
     gap: 2rem;
-    opacity: 1;
-    position: relative;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Contact Section Styles */
@@ -610,8 +610,9 @@ section.active .tab-content {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s;
     overflow: hidden;
-
-
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
 }
 
 .project-card:hover {
@@ -619,7 +620,7 @@ section.active .tab-content {
 }
 
 .bg-img {
-    width: 350px;
+    width: 100%;
     height: 225px;
     object-fit: cover;
     border-radius: 4px;
@@ -630,8 +631,6 @@ section.active .tab-content {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 1rem;
 }
 
 .project-card h4 {
@@ -656,15 +655,8 @@ section.active .tab-content {
 
 .project-card .link-bg {
     display: flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.132);
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    transition: background 0.3s ease, transform 0.2s ease;
-    margin-left: 16rem;
-    height: 10%;
-    margin-bottom: 5%;
-
+    justify-content: flex-end;
+    margin-top: 1rem;
 }
 
 .link-bg:hover {
@@ -1396,7 +1388,7 @@ footer p {
     }
 
     .main-content h2 {
-        font-size: 2.5rem;
+        font-size: 2.5rem;Fix the 
     }
 
     .main-content h3 {
