@@ -1370,7 +1370,8 @@ footer p {
     .project-card .link-bg {
         margin: 1rem auto;
         width: auto;
-        max-width: 80px;
+        max-width: 110px;
+        margin-left: auto;
     }
 
     /* Contact Section */
@@ -1423,6 +1424,11 @@ footer p {
         flex-direction: column;
         text-align: center;
         padding: 1rem;
+    }
+    .project-card .link-bg {
+        margin: 1rem auto;
+        width: auto;
+        max-width: 100px;
     }
 }
 
