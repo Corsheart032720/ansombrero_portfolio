@@ -1261,7 +1261,7 @@ footer p {
 
     header .name {
         display: inline-block;
-        margin-right: auto;
+        margin-right: 100px;
     }
 
     section h2 {
