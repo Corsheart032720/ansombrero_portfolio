@@ -1450,6 +1450,11 @@ footer p {
         gap: 1rem;
         padding: 2rem;
     }
+    .tech-icons img {
+        width: 60px;
+        height: 60px;
+    }
+
     .project-card .link-bg {
         margin: 1rem auto;
         width: auto;
