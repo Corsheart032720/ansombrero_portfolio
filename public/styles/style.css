@@ -1479,10 +1479,28 @@ footer p {
 
     .tab-content.active {
         grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 2rem;
     }
 
     .contact .container {
         gap: 2rem;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .certificate-card {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .certificate-card:hover {
+        transform: scale(1.15);
     }
 }
 
@@ -1546,8 +1564,8 @@ footer p {
 
     .tab-content.active {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
-        padding: 0 1.5rem;
+        gap: 2rem;
+        padding: 1rem;
     }
 
     .contact .container {
@@ -1572,15 +1590,18 @@ footer p {
         margin: 0;
     }
 
-    .project-card {
-        width: 90%;
-        max-width: 300px;
+    .project-card,
+    .certificate-card {
+        width: 85%;
+        max-width: 280px;
         margin: 0 auto;
-        padding: 0.8rem;
+    }
+
+    .certificate-card:hover {
+        transform: scale(1.1);
     }
 
     .bg-img {
-        width: 100%;
         height: 180px;
     }
 
@@ -1641,9 +1662,14 @@ footer p {
         font-size: 11px;
     }
 
-    .project-card {
+    .project-card,
+    .certificate-card {
         width: 85%;
-        max-width: 280px;
+        max-width: 260px;
+    }
+
+    .certificate-card:hover {
+        transform: scale(1.05);
     }
 
     .bg-img {
