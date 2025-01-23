@@ -581,10 +581,12 @@ section.active .tab-content {
 
 .tab-content.active {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
     gap: 2rem;
-    opacity: 1;
-    position: relative;
+    justify-content: center;
+    padding: 0 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 /* Contact Section Styles */
@@ -610,7 +612,7 @@ section.active .tab-content {
     background: rgba(255, 255, 255, 0.1);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s;
@@ -618,6 +620,8 @@ section.active .tab-content {
     width: 100%;
     max-width: 350px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -662,10 +666,10 @@ section.active .tab-content {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: auto;
     margin-left: auto;
     width: fit-content;
     padding: 5px 15px;
-    margin-bottom: 5%;
 }
 
 .link-bg:hover {
@@ -1478,7 +1482,9 @@ footer p {
     }
 
     .tab-content.active {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(300px, 320px));
+        gap: 2rem;
+        padding: 0 3rem;
     }
 
     .contact .container {
@@ -1545,8 +1551,9 @@ footer p {
     }
 
     .tab-content.active {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        grid-template-columns: minmax(280px, 320px);
+        gap: 2rem;
+        padding: 0 1.5rem;
     }
 
     .contact .container {
