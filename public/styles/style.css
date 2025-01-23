@@ -1364,3 +1364,255 @@ footer p {
     }
 }
 
+/* Add or update these responsive styles */
+
+/* Base responsive adjustments */
+@media (max-width: 1024px) {
+    .main-content {
+        padding: 2rem;
+        gap: 3rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: auto;
+        padding-top: 100px;
+    }
+
+    .main-content .content {
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .main-content h1,
+    .main-content h2,
+    .main-content h3,
+    .main-content p {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .main-content h1 {
+        font-size: 4rem;
+    }
+
+    .main-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .main-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .header-graphic {
+        margin-top: 2rem;
+    }
+
+    .header-graphic img {
+        max-width: 400px;
+    }
+}
+
+/* Tablet specific adjustments */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        padding: 2rem;
+    }
+
+    .about-container {
+        gap: 3rem;
+    }
+
+    .highlight-cards {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .card {
+        min-width: 250px;
+        flex: 0 1 calc(50% - 1rem);
+    }
+
+    .portfolio-tabs {
+        width: 90%;
+        max-width: 600px;
+    }
+
+    .tab-content.active {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact .container {
+        gap: 2rem;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+    .main-content {
+        padding: 1rem;
+        padding-top: 80px;
+    }
+
+    .main-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .main-content h2 {
+        font-size: 2rem;
+    }
+
+    .main-content h3 {
+        font-size: 1rem;
+    }
+
+    .main-content p {
+        font-size: 0.9rem;
+    }
+
+    .header-graphic img {
+        max-width: 300px;
+    }
+
+    .about-container {
+        flex-direction: column-reverse;
+        padding: 1rem;
+        gap: 2rem;
+    }
+
+    .profile-picture img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .highlight-cards {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .card {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .portfolio-tabs {
+        padding: 0.5rem;
+        gap: 1rem;
+    }
+
+    .portfolio-tabs span {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .tab-content.active {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contact .container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .ibox, .cbox {
+        width: 100%;
+        max-width: none;
+    }
+
+    .social-links-container {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 480px) {
+    .main-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .main-content h2 {
+        font-size: 1.8rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .profile-picture img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .social-link {
+        padding: 0.8rem;
+    }
+
+    .social-link i {
+        font-size: 24px;
+    }
+
+    .social-info h3 {
+        font-size: 14px;
+    }
+
+    .social-info p {
+        font-size: 11px;
+    }
+}
+
+/* Landscape mode adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+    .main-content {
+        min-height: auto;
+        padding-top: 100px;
+    }
+
+    .header-graphic img {
+        max-width: 250px;
+    }
+
+    .about-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .highlight-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 0 1 calc(50% - 1rem);
+    }
+}
+
+/* Fix for very small screens */
+@media (max-width: 320px) {
+    .main-content h1 {
+        font-size: 2rem;
+    }
+
+    .main-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .portfolio-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-tabs span {
+        width: 100%;
+        text-align: center;
+    }
+}
+
