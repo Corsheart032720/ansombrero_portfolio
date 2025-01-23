@@ -793,6 +793,35 @@ section.active .tab-content {
     .bg-img {
         width: 100%;
     }
+
+    .main-image {
+        position: relative;
+        width: 100%;
+        display: flex;
+    }
+
+    .main-image img {
+        width: 85%;
+        margin: 0;
+    }
+
+    .image-selection {
+        position: absolute;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 10px;
+        margin-top: 0;
+        width: auto;
+        height: 100%;
+    }
+
+    .image-selection img {
+        width: 40px;
+        height: 40px;
+        margin-right: 5px;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
