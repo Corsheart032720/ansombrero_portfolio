@@ -1444,7 +1444,11 @@ footer p {
     }
 
     .tech-icons {
-        gap: 2rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 2rem;
     }
     .project-card .link-bg {
         margin: 1rem auto;
