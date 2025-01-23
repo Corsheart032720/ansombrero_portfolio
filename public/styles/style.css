@@ -1213,7 +1213,7 @@ footer p {
     /* Header & Navigation */
     header {
         padding: 1rem;
-        position: fixed; /* Changed from sticky to fixed */
+        position: fixed;
         width: 100%;
         box-sizing: border-box;
         display: flex;
@@ -1254,25 +1254,9 @@ footer p {
         display: block;
     }
 
-    /* Adjust main content to account for fixed header */
-    .main-content {
-        padding-top: 200px; /* Add padding to prevent content from hiding under header */
-    }
-
-    header .name {
-        display: inline-block;
-        margin-right: 35px;
-    }
-
-    section h2 {
-        margin-left: 2rem;
-    }
-    section h3{
-        margin-left: 2rem;
-    }
-
     /* Main Content Section */
     .main-content {
+        padding-top: 200px; /* Add padding to prevent content from hiding under header */
         flex-direction: column;
         padding: 2rem;
         gap: 2rem;
