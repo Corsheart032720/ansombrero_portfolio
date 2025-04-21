@@ -701,6 +701,10 @@ section.active .tab-content {
     background-color: #2e3358;
     transform: scale(1.05);
 }
+.social-galink:hover {
+    background-color: yellow;
+    transform: scale(1.05);
+}
 
 
 /* Certificates Section */
