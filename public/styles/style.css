@@ -697,26 +697,10 @@ section.active .tab-content {
 
 }
 
-.social-fblink:hover {
-    background-color:#1877F2;
-    transform: scale(1.05);
-}
-
-.social-instalink:hover {
-    background-color: #F56040;
-    transform: scale(1.05);
-}
-
-.social-gitlink:hover {
-    background-color: #000AFF;
-    transform: scale(1.05);
-}
-
 .social-link:hover {
-    background-color: #0077B5;
+    background-color: #2e3358;
     transform: scale(1.05);
-}   
-
+}
 
 
 /* Certificates Section */
